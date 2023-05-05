@@ -15,11 +15,25 @@
 
 .post {
     display: flex;
-    padding: 15px;
+    flex-direction: column;
+    padding: 5px;
     border: 2px solid blueviolet;
     margin: 15px;
     justify-content: space-between;
-    align-items: center;
+}
+
+.post__content {
+    padding: 10px;
+}
+
+.post_buttons {
+    display: flex;
+
+}
+
+.post__btn {
+    width: fit-content;
+    margin: 0 5px;
 }
 
 .postAddForm {

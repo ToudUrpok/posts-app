@@ -1,12 +1,16 @@
 import axios from 'axios';
 
 export default class PostService {
-    static async getPosts() {
-        try {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            return response.data;
-        } catch (e) {
-            console.log(e);
-        }
+    static async getPosts(limit, page) {
+        //const url = limit ? `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
+        //                  : 'https://jsonplaceholder.typicode.com/posts'
+        //const response = await axios.get(url);
+        const params = limit ? {_limit: limit, _page: page} : {};
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+            params: params
+        });
+        const totalCount = response.headers.has('x-total-count') ? response.headers['x-total-count']
+                                                                 : response.data.length;
+        return { data: response.data, totalCount: totalCount};
     }
 }
