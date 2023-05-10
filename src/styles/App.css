@@ -6,10 +6,17 @@
 
 #root {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App {
+#App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Posts {
     width: 800px;
 }
 
@@ -26,9 +33,9 @@
     padding: 10px;
 }
 
-.post_buttons {
+.post__buttons {
     display: flex;
-
+    justify-content: flex-end;
 }
 
 .post__btn {
@@ -71,4 +78,56 @@ h1 {
     color: rgb(138, 60, 226);
     font-weight: bold;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgba(137, 43, 226, 0.3);
+}
+
+.navbar__link {
+    margin-left: 15px;
+    padding: 3px 15px;
+    width: fit-content;
+    color: blueviolet;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.error__page__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-top: 100px;
 }
